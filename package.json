@@ -5,6 +5,9 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "node-sass-version-fix": "dist/cli.cjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/markthree/node-sass-version-fix.git"
@@ -45,5 +48,9 @@
     "bumpp": "^9.1.1",
     "typescript": "^5.1.6",
     "unbuild": "^1.2.1"
+  },
+  "dependencies": {
+    "consola": "^3.2.3",
+    "kolorist": "^1.8.0"
   }
 }

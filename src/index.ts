@@ -4,7 +4,7 @@ const [major] = version.slice(1).split(".");
 
 export const nodeMajorVersion = Number(major);
 
-export function normalizeNodeSassVersion() {
+export function getNodeSassVersion() {
   switch (nodeMajorVersion) {
     case 20:
       return "^9.0.0";

@@ -4,22 +4,27 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-importers:
+dependencies:
+  consola:
+    specifier: ^3.2.3
+    version: 3.2.3
+  kolorist:
+    specifier: ^1.8.0
+    version: 1.8.0
 
-  .:
-    devDependencies:
-      '@types/node':
-        specifier: ^20.5.0
-        version: 20.5.0
-      bumpp:
-        specifier: ^9.1.1
-        version: 9.1.1
-      typescript:
-        specifier: ^5.1.6
-        version: 5.1.6
-      unbuild:
-        specifier: ^1.2.1
-        version: 1.2.1
+devDependencies:
+  '@types/node':
+    specifier: ^20.5.0
+    version: 20.5.0
+  bumpp:
+    specifier: ^9.1.1
+    version: 9.1.1
+  typescript:
+    specifier: ^5.1.6
+    version: 5.1.6
+  unbuild:
+    specifier: ^1.2.1
+    version: 1.2.1
 
 packages:
 
@@ -967,7 +972,6 @@ packages:
   /consola@3.2.3:
     resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
     engines: {node: ^14.18.0 || >=16.10.0}
-    dev: true
 
   /convert-source-map@1.9.0:
     resolution: {integrity: sha512-ASFBup0Mz1uyiIjANan1jzLQami9z1PoYSZCiiYW2FczPbenXc45FZdBZLzOT+r6+iciuEModtmCti+hjaAk0A==}
@@ -1349,6 +1353,10 @@ packages:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
     engines: {node: '>=6'}
     dev: true
+
+  /kolorist@1.8.0:
+    resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
+    dev: false
 
   /lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
