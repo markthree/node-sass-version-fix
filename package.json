@@ -1,5 +1,5 @@
 {
-  "version": "0.0.2",
+  "version": "0.1.0",
   "name": "node-sass-version-fix",
   "description": "fix node-sass version",
   "main": "./dist/index.cjs",
