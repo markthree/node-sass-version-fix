@@ -38,6 +38,10 @@ async function fix() {
 
   await writeFile("package.json", newPackageJson);
 
+  if (!existsSync('.npmrc')) {
+    await writeFile(".npmrc", "registry=https://registry.npmmirror.com/\nsass_binary_site=https://npm.taobao.org/mirrors/node-sass/")
+  }
+
   log.success(`fix successful, please execute ${cyan("npm install")} again`);
   console.log();
 }
