@@ -1,4 +1,5 @@
 import { version } from "process";
+import { readFile, writeFile } from "fs/promises";
 
 const [major] = version.slice(1).split(".");
 
@@ -21,4 +22,15 @@ export function getNodeSassVersion() {
     default:
       break;
   }
+}
+
+export const nodeSassReg = /"node-sass":.*([".*"])(?=,)/;
+
+export async function fixPackageJson(file = "package.json") {
+  const packageJson = await readFile(file, { encoding: "utf-8" });
+  const newPackageJson = packageJson.replace(
+    nodeSassReg,
+    `"node-sass": "${getNodeSassVersion()}"`,
+  );
+  await writeFile(file, newPackageJson);
 }
