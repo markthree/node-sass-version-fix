@@ -33,7 +33,7 @@ async function fix() {
 
   const newPackageJson = packageJson.replace(
     nodeSassReg,
-    `"node-sass": ${getNodeSassVersion()}`,
+    `"node-sass": "${getNodeSassVersion()}"`,
   );
 
   await writeFile("package.json", newPackageJson);
